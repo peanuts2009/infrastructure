@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: simple-http-server-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: simple-http-server
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: simple-http-server
-        image: ghcr.io/peanuts2009/simple-http-server
+        image: ghcr.io/peanuts2009/simple-http-server:0
         ports:
         - containerPort: 8080
